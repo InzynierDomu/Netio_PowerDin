@@ -1,0 +1,152 @@
+{
+  "broker": {
+    "clientid": "netio${DEVICE_SN}",
+    "keepalive": 30,
+    "password": "id",
+    "port": 1883,
+    "protocol": "mqtt",
+    "ssl": false,
+    "type": "generic",
+    "url": "192.168.0.17",
+    "username": "id"
+  },
+  "publish": [
+    {
+      "topic": "netio/${DEVICE_NAME}/OUTPUTS/1/STATE",
+      "qos": 0,
+      "retain": true,
+      "payload": "${OUTPUTS/1/STATE}",
+      "events": [
+        {
+          "source": "OUTPUTS/1/STATE",
+          "type": "change"
+        }
+      ]
+    },
+    {
+      "topic": "netio/${DEVICE_NAME}/OUTPUTS/2/STATE",
+      "qos": 0,
+      "retain": true,
+      "payload": "${OUTPUTS/2/STATE}",
+      "events": [
+        {
+          "source": "OUTPUTS/2/STATE",
+          "type": "change"
+        }
+      ]
+    },
+    {
+      "topic": "netio/${DEVICE_NAME}/OUTPUTS/3/STATE",
+      "qos": 0,
+      "retain": true,
+      "payload": "${OUTPUTS/3/STATE}",
+      "events": [
+        {
+          "source": "OUTPUTS/3/STATE",
+          "type": "change"
+        }
+      ]
+    },
+    {
+      "topic": "netio/${DEVICE_NAME}/OUTPUTS/4/STATE",
+      "qos": 0,
+      "retain": true,
+      "payload": "${OUTPUTS/4/STATE}",
+      "events": [
+        {
+          "source": "OUTPUTS/4/STATE",
+          "type": "change"
+        }
+      ]
+    },
+    {
+      "topic": "netio/${DEVICE_NAME}/OUTPUTS/1/CURRENT",
+      "qos": 0,
+      "retain": true,
+      "payload": "${OUTPUTS/1/CURRENT}",
+      "events": [
+        {
+          "delta": 200,
+          "source": "OUTPUTS/1/CURRENT",
+          "type": "delta"
+        }
+      ]
+    },
+    {
+      "topic": "netio/${DEVICE_NAME}/OUTPUTS/2/CURRENT",
+      "qos": 0,
+      "retain": true,
+      "payload": "${OUTPUTS/2/CURRENT}",
+      "events": [
+        {
+          "type": "timer",
+          "period": 60
+        }
+      ]
+    },
+    {
+      "topic": "netio/${DEVICE_NAME}/OUTPUTS/1/STATE",
+      "qos": 0,
+      "retain": true,
+      "payload": "${INPUTS/1/STATE}",
+      "events": [
+        {
+          "source": "INPUTS/1/STATE",
+          "type": "change"
+        }
+      ]
+    },
+    {
+      "topic": "netio/${DEVICE_NAME}/OUTPUTS/2/STATE",
+      "qos": 0,
+      "retain": true,
+      "payload": "${INPUTS/2/STATE}",
+      "events": [
+        {
+          "source": "INPUTS/2/STATE",
+          "type": "change"
+        }
+      ]
+    },
+    {
+      "topic": "netio/${DEVICE_NAME}/INPUTS/1/COUNTER",
+      "qos": 0,
+      "retain": true,
+      "payload": "${INPUTS/1/S0}",
+      "events": [
+        {
+          "delta": 250,
+          "source": "INPUTS/1/S0",
+          "type": "delta"
+        }
+      ]
+    },
+    {
+      "topic": "netio/${DEVICE_NAME}/INPUTS/2/COUNTER",
+      "qos": 0,
+      "retain": true,
+      "payload": "${INPUTS/2/S0}",
+      "events": [
+        {
+          "delta": 1,
+          "source": "INPUTS/2/S0",
+          "type": "delta"
+        }
+      ]
+    }
+  ],
+  "subscribe": [
+    {
+      "topic": "${DEVICE_NAME}/output/2/action",
+      "qos": 0,
+      "target": "OUTPUTS/2/ACTION",
+      "action": "${payload}"
+    },
+    {
+      "topic": "${DEVICE_NAME}/output/4/action",
+      "qos": 0,
+      "target": "OUTPUTS/4/ACTION",
+      "action": "${payload}"
+    }
+  ]
+}

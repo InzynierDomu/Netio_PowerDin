@@ -1,0 +1,12 @@
+input_boolean:
+  netio_power_output_1:
+    name: netio_power_output_1
+  netio_power_output_2:
+    name: netio_power_output_2
+  netio_power_output_3:
+    name: netio_power_output_3
+  netio_power_output_4:
+    name: netio_power_output_4
+
+mqtt:
+  broker: 192.168.0.17

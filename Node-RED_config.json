@@ -1,0 +1,401 @@
+[
+    {
+        "id": "aa549663.3d1cc8",
+        "type": "mqtt in",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "topic": "netio/PowerDIN-BB/OUTPUTS/2/CURRENT",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "bf3140bb.f9894",
+        "x": 400,
+        "y": 280,
+        "wires": [
+            [
+                "6d5aad1d.c72cd4",
+                "ebf2057.1bf68f8"
+            ]
+        ]
+    },
+    {
+        "id": "6d5aad1d.c72cd4",
+        "type": "ha-entity",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "server": "7ae46279.48816c",
+        "version": 1,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityType": "sensor",
+        "config": [
+            {
+                "property": "name",
+                "value": "prąd_2"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            }
+        ],
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "resend": true,
+        "outputLocation": "",
+        "outputLocationType": "none",
+        "inputOverride": "allow",
+        "x": 790,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ebf2057.1bf68f8",
+        "type": "debug",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "98ffa0b6.fca35",
+        "type": "mqtt out",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "topic": "PowerDIN-BB/output/2/action",
+        "qos": "0",
+        "retain": "",
+        "broker": "bf3140bb.f9894",
+        "x": 1000,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "3ce8f59.07d280a",
+        "type": "server-state-changed",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "server": "7ae46279.48816c",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_boolean.netio_power_output_1",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "num",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 450,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "21f0e1b9.6fbede",
+        "type": "server-state-changed",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "server": "7ae46279.48816c",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_boolean.netio_power_output_2",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 450,
+        "y": 760,
+        "wires": [
+            [
+                "32970b91.326924"
+            ]
+        ]
+    },
+    {
+        "id": "be4fc973.d4bbf8",
+        "type": "server-state-changed",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "server": "7ae46279.48816c",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_boolean.netio_power_output_3",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "num",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 450,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f1fa42dc.98518",
+        "type": "server-state-changed",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "server": "7ae46279.48816c",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_boolean.netio_power_output_4",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "num",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 450,
+        "y": 880,
+        "wires": [
+            [
+                "e9348281.5179b"
+            ]
+        ]
+    },
+    {
+        "id": "32970b91.326924",
+        "type": "function",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "func": "if(msg.payload)\n{\n    msg.payload = 1;\n}else{\n    msg.payload = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 760,
+        "y": 760,
+        "wires": [
+            [
+                "98ffa0b6.fca35"
+            ]
+        ]
+    },
+    {
+        "id": "1da9b933.e3a137",
+        "type": "mqtt in",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "topic": "netio/PowerDIN-BB/INPUTS/2/COUNTER",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "bf3140bb.f9894",
+        "x": 460,
+        "y": 560,
+        "wires": [
+            [
+                "bfc3ea82.dfa1c8",
+                "4b917c7c.7ece24"
+            ]
+        ]
+    },
+    {
+        "id": "aeb76806.3ae9f8",
+        "type": "mqtt out",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "topic": "PowerDIN-BB/output/4/action",
+        "qos": "0",
+        "retain": "",
+        "broker": "bf3140bb.f9894",
+        "x": 1000,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "e9348281.5179b",
+        "type": "function",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "func": "if(msg.payload)\n{\n    msg.payload = 1;\n}else{\n    msg.payload = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 760,
+        "y": 880,
+        "wires": [
+            [
+                "aeb76806.3ae9f8"
+            ]
+        ]
+    },
+    {
+        "id": "bfc3ea82.dfa1c8",
+        "type": "function",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "func": "if(msg.payload === \"50\")\n{\n    msg.payload = 1;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 760,
+        "y": 560,
+        "wires": [
+            [
+                "9ee4e169.72453"
+            ]
+        ]
+    },
+    {
+        "id": "4b917c7c.7ece24",
+        "type": "debug",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9ee4e169.72453",
+        "type": "mqtt out",
+        "z": "20af5eeb.2d0082",
+        "name": "",
+        "topic": "PowerDIN-BB/output/4/action",
+        "qos": "0",
+        "retain": "",
+        "broker": "bf3140bb.f9894",
+        "x": 1040,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "bf3140bb.f9894",
+        "type": "mqtt-broker",
+        "name": "local",
+        "broker": "192.168.0.17",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "7ae46279.48816c",
+        "type": "server",
+        "name": "Home Assistant",
+        "addon": true
+    }
+]
